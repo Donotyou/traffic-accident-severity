@@ -1,0 +1,343 @@
+{
+  "model_name": "XGBoost + tuned decision",
+  "decision_weights": [
+    1.0,
+    1.1126,
+    1.951
+  ],
+  "labels": {
+    "0": "Slight Injury",
+    "1": "Serious Injury",
+    "2": "Fatal injury"
+  },
+  "input_columns": [
+    "Time",
+    "Day_of_week",
+    "Age_band_of_driver",
+    "Drivers_gender",
+    "Educational_level",
+    "Vehicle_driver_relation",
+    "Driving_experience",
+    "Type_of_vehicle",
+    "Owner_of_vehicle",
+    "Service_year_of_vehicle",
+    "Defect_of_vehicle",
+    "Area_accident_occured",
+    "Lanes_or_Medians",
+    "Road_allignment",
+    "Types_of_Junction",
+    "Road_surface_type",
+    "Road_surface_conditions",
+    "Light_conditions",
+    "Weather_conditions",
+    "Type_of_collision",
+    "Number_of_vehicles_involved",
+    "Number_of_casualties",
+    "Vehicle_movement",
+    "Casualty_class",
+    "Casualty_gender",
+    "Age_band_of_casualty",
+    "Work_of_casuality",
+    "Fitness_of_casuality",
+    "Pedestrian_movement",
+    "Cause_of_accident"
+  ],
+  "categorical_options": {
+    "Day_of_week": [
+      "Friday",
+      "Monday",
+      "Saturday",
+      "Sunday",
+      "Thursday",
+      "Tuesday",
+      "Wednesday"
+    ],
+    "Age_band_of_driver": [
+      "18-30",
+      "31-50",
+      "Over 51",
+      "Under 18",
+      "Unknown"
+    ],
+    "Drivers_gender": [
+      "Female",
+      "Male"
+    ],
+    "Educational_level": [
+      "Above high school",
+      "Elementary school",
+      "High school",
+      "Illiterate",
+      "Junior high school",
+      "Unknown",
+      "Writing & reading"
+    ],
+    "Vehicle_driver_relation": [
+      "Employee",
+      "Other",
+      "Owner",
+      "Unknown"
+    ],
+    "Driving_experience": [
+      "1-2yr",
+      "2-5yr",
+      "5-10yr",
+      "Above 10yr",
+      "Below 1yr",
+      "No Licence",
+      "Unknown"
+    ],
+    "Type_of_vehicle": [
+      "Automobile",
+      "Bajaj",
+      "Bicycle",
+      "Long lorry",
+      "Lorry (11?40Q)",
+      "Lorry (41?100Q)",
+      "Motorcycle",
+      "Other",
+      "Pick up upto 10Q",
+      "Public (12 seats)",
+      "Public (13?45 seats)",
+      "Public (> 45 seats)",
+      "Ridden horse",
+      "Special vehicle",
+      "Stationwagen",
+      "Taxi",
+      "Turbo"
+    ],
+    "Owner_of_vehicle": [
+      "Governmental",
+      "Organization",
+      "Other",
+      "Owner"
+    ],
+    "Service_year_of_vehicle": [
+      "1-2yr",
+      "2-5yrs",
+      "5-10yrs",
+      "5-11yrs",
+      "Above 10yr",
+      "Below 1yr",
+      "Unknown"
+    ],
+    "Defect_of_vehicle": [
+      "5",
+      "7",
+      "No defect"
+    ],
+    "Area_accident_occured": [
+      "Church areas",
+      "Hospital areas",
+      "Industrial areas",
+      "Market areas",
+      "Office areas",
+      "Other",
+      "Outside Rural village areas",
+      "Recreational areas",
+      "Residential areas",
+      "Rural village areas",
+      "Rural village areasOffice areas",
+      "School areas",
+      "other"
+    ],
+    "Lanes_or_Medians": [
+      "Double carriageway (median)",
+      "One way",
+      "Other",
+      "Two-way (divided with broken lines road marking)",
+      "Two-way (divided with solid lines road marking)",
+      "Undivided Two way",
+      "Unknown"
+    ],
+    "Road_allignment": [
+      "Escarpments",
+      "Gentle horizontal curve",
+      "Sharp reverse curve",
+      "Steep grade downward with mountainous terrain",
+      "Steep grade upward with mountainous terrain",
+      "Tangent road with flat terrain",
+      "Tangent road with mild grade and flat terrain",
+      "Tangent road with mountainous terrain and",
+      "Tangent road with rolling terrain"
+    ],
+    "Types_of_Junction": [
+      "+",
+      "No junction",
+      "O",
+      "Other",
+      "Out of junction",
+      "T",
+      "X",
+      "Y"
+    ],
+    "Road_surface_type": [
+      "Asphalt roads",
+      "Asphalt roads with some distress",
+      "Earth roads",
+      "Gravel roads",
+      "Other"
+    ],
+    "Road_surface_conditions": [
+      "Dry",
+      "Flood over 3cm. deep",
+      "Snow",
+      "Wet or damp"
+    ],
+    "Light_conditions": [
+      "Darkness - lights lit",
+      "Darkness - lights unlit",
+      "Darkness - no lighting",
+      "Daylight"
+    ],
+    "Weather_conditions": [
+      "Cloudy",
+      "Fog or mist",
+      "Normal",
+      "Other",
+      "Raining",
+      "Raining and Windy",
+      "Snow",
+      "Unknown",
+      "Windy"
+    ],
+    "Type_of_collision": [
+      "Collision with animals",
+      "Collision with pedestrians",
+      "Collision with roadside objects",
+      "Collision with roadside-parked vehicles",
+      "Fall from vehicles",
+      "Fall_from_vehicles",
+      "Other",
+      "Rollover",
+      "Unknown",
+      "Vehicle with vehicle collision",
+      "With Train"
+    ],
+    "Vehicle_movement": [
+      "Entering a junction",
+      "Getting off",
+      "Going straight",
+      "Moving Backward",
+      "Other",
+      "Overtaking",
+      "Parked",
+      "Reversing",
+      "Stopping",
+      "Turnover",
+      "U-Turn",
+      "Unknown",
+      "Waiting to go"
+    ],
+    "Casualty_class": [
+      "Driver or rider",
+      "Passenger",
+      "Pedestrian",
+      "na"
+    ],
+    "Casualty_gender": [
+      "Female",
+      "Male",
+      "na"
+    ],
+    "Age_band_of_casualty": [
+      "18-30",
+      "31-50",
+      "5",
+      "Over 51",
+      "Under 18",
+      "na"
+    ],
+    "Work_of_casuality": [
+      "Driver",
+      "Employee",
+      "Other",
+      "Self-employed",
+      "Student",
+      "Unemployed",
+      "Unknown"
+    ],
+    "Fitness_of_casuality": [
+      "Blind",
+      "Deaf",
+      "Normal",
+      "NormalNormal",
+      "Other"
+    ],
+    "Pedestrian_movement": [
+      "Crossing from driver's nearside",
+      "Crossing from nearside - masked by parked or statioNot a Pedestrianry vehicle",
+      "Crossing from offside - masked by  parked or statioNot a Pedestrianry vehicle",
+      "In carriageway, statioNot a Pedestrianry - not crossing  (standing or playing)",
+      "In carriageway, statioNot a Pedestrianry - not crossing  (standing or playing) - masked by parked or statioNot a Pedestrianry vehicle",
+      "Not a Pedestrian",
+      "Unknown or other",
+      "Walking along in carriageway, back to traffic",
+      "Walking along in carriageway, facing traffic"
+    ],
+    "Cause_of_accident": [
+      "Changing lane to the left",
+      "Changing lane to the right",
+      "Driving at high speed",
+      "Driving carelessly",
+      "Driving to the left",
+      "Driving under the influence of drugs",
+      "Drunk driving",
+      "Getting off the vehicle improperly",
+      "Improper parking",
+      "Moving Backward",
+      "No distancing",
+      "No priority to pedestrian",
+      "No priority to vehicle",
+      "Other",
+      "Overloading",
+      "Overspeed",
+      "Overtaking",
+      "Overturning",
+      "Turnover",
+      "Unknown"
+    ]
+  },
+  "numeric_ranges": {
+    "Number_of_vehicles_involved": [
+      1,
+      7
+    ],
+    "Number_of_casualties": [
+      1,
+      8
+    ]
+  },
+  "test_metrics": {
+    "accuracy": 0.7692307692307693,
+    "balanced_accuracy": 0.5324764339085054,
+    "macro_f1": 0.5217766677383272,
+    "weighted_f1": 0.7751534272401776,
+    "mcc": 0.26139828528085013,
+    "per_class": {
+      "Slight Injury": {
+        "precision": 0.8753581661891118,
+        "recall": 0.8501855287569573,
+        "f1-score": 0.8625882352941177,
+        "support": 2156.0
+      },
+      "Serious Injury": {
+        "precision": 0.34444444444444444,
+        "recall": 0.3924050632911392,
+        "f1-score": 0.3668639053254438,
+        "support": 395.0
+      },
+      "Fatal injury": {
+        "precision": 0.3188405797101449,
+        "recall": 0.3548387096774194,
+        "f1-score": 0.33587786259541985,
+        "support": 62.0
+      }
+    }
+  },
+  "trained_at": "2026-11-14T19:39:28+00:00",
+  "versions": {
+    "python": "3.10.0",
+    "scikit-learn": "1.7.2"
+  }
+}

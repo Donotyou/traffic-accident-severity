@@ -1,0 +1,6 @@
+-r requirements.txt
+pytest>=7.4
+jupyter>=1.0
+nbformat>=5.9
+# Only needed for the ANN section of the notebook (not for the app):
+tensorflow>=2.15
